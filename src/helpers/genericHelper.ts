@@ -432,7 +432,7 @@ ${githubLogins.map((l) => `- ${l}`)}`,
     switch (platform) {
       case 'win32': {
         Object.entries(vars).forEach(([key, value], i, arr) => {
-          process.stdout.write('set ');
+          process.stdout.write('setx ');
           process.stdout.write(key);
           process.stdout.write('=');
           process.stdout.write(value);
