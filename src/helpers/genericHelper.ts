@@ -434,10 +434,10 @@ ${githubLogins.map((l) => `- ${l}`)}`,
         Object.entries(vars).forEach(([key, value], i, arr) => {
           process.stdout.write('setx ');
           process.stdout.write(key);
-          process.stdout.write('=');
+          process.stdout.write(' ');
           process.stdout.write(value);
           if (i + 1 < arr.length) {
-            process.stdout.write(' & ');
+            process.stdout.write(' && ');
           }
         });
         break;
